@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>마로빔의 월드</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #f0f0f0;
+      --accent-color: #00c896;
+      --card-bg: #1e1e1e;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+    a { color: var(--accent-color); text-decoration: none; }
+    section { padding: 60px 20px; max-width: 900px; margin: auto; }
+    h1, h2 { color: var(--accent-color); }
+    .social-links a {
+      display: inline-block;
+      margin: 0 10px;
+      background-color: var(--card-bg);
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+    .social-links a:hover { background-color: var(--accent-color); color: black; }
+    .portfolio-item {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+    .portfolio-item:hover { transform: scale(1.02); }
+    .portfolio-item img { width: 100%; border-radius: 10px; margin-top: 10px; }
+    .fade-in { opacity: 0; animation: fadeIn 1s ease-out forwards; }
+    @keyframes fadeIn { to { opacity: 1; } }
+    .blog-post {
+      background: var(--card-bg);
+      padding: 20px;
+      border-left: 5px solid var(--accent-color);
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body onload="playSound()">
+  <audio id="bgm" autoplay loop>
+    <source src="https://example.com/your-bgm.mp3" type="audio/mpeg" />
+  </audio>
+  <audio id="effect" autoplay>
+    <source src="https://example.com/your-sound.mp3" type="audio/mpeg" />
+  </audio>
+  <script>
+    function playSound() {
+      const effect = document.getElementById('effect');
+      effect.volume = 0.5;
+      effect.play();
+    }
+  </script>
+  <section class="fade-in">
+    <h1>마로빔 입니다</h1>
+    <p>“마인크래프트로 세상을 비비는 광기의 마인크래프트 환장러”</p>
+    <div class="social-links">
+      <a href="https://www.youtube.com/@마로빔" target="_blank">유튜브</a>
+      <a href="https://www.instagram.com/mc._.marobim" target="_blank">인스타</a>
+      <a href="https://chzzk.naver.com/6523c14122184047c931e7f945f4a6ad" target="_blank">치지직</a>
+    </div>
+  </section>
+  <section class="fade-in">
+    <h2>포트폴리오</h2>
+    <div class="portfolio-item">
+      <h3>서버 이름 또는 프로젝트 이름</h3>
+      <p>이 프로젝트는 마인크래프트에서 ~한 기능을 구현한 서버입니다.</p>
+      <p><strong>서버 주소:</strong> play.marobim.net</p>
+      <a href="https://github.com/marobim/project-link" target="_blank">GitHub 보기</a>
+      <img src="https://via.placeholder.com/600x300" alt="스크린샷">
+    </div>
+    <div class="portfolio-item">
+      <h3>다른 프로젝트 이름</h3>
+      <p>이건 코틀린으로 만든 플러그인으로 ~을 할 수 있어요.</p>
+      <a href="https://github.com/marobim/other-project" target="_blank">GitHub 보기</a>
+      <img src="https://via.placeholder.com/600x300" alt="스크린샷">
+    </div>
+  </section>
+  <section class="fade-in">
+    <h2>마로빔의 일상</h2>
+    <div class="blog-post">
+      <h3>2025.04.19 - 오늘은 웹페이지 만드는 날</h3>
+      <p>HTML 하나로도 내가 원하는 세계를 만들 수 있다는 게 너무 재밌어! 마인크래프트 플러그인 만드는 거랑 느낌 비슷함!</p>
+    </div>
+    <div class="blog-post">
+      <h3>2025.04.18 - 마을 코어 AI 구상</h3>
+      <p>마을 주민들이 자급자족하게 만들 수 있는 시스템 구상 중... 건설도, 전투도, 농사도!</p>
+    </div>
+  </section>
+</body>
+</html>
